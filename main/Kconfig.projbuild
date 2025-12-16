@@ -1,0 +1,30 @@
+menu "OLED"
+
+config OLED_I2C_PORT
+    int "I2C port"
+    range 0 1
+    default 0
+    help
+        I2C controller port number.
+
+config OLED_I2C_SDA
+    int "I2C SDA GPIO"
+    default 5
+    help
+        I2C SDA pin used by the OLED display.
+
+config OLED_I2C_SCL
+    int "I2C SCL GPIO"
+    default 6
+    help
+        I2C SCL pin used by the OLED display.
+
+config OLED_I2C_ADDR
+    hex "OLED I2C address (7-bit)"
+    range 0x03 0x77
+    default 0x3C
+    help
+        7-bit I2C address of the SSD1306 controller (commonly 0x3C or 0x3D).
+
+endmenu
+
